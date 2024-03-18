@@ -1,51 +1,34 @@
-# Copyright (c) Streamlit Inc. (2018-2022) Snowflake Inc. (2022)
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 import streamlit as st
-from streamlit.logger import get_logger
-
-LOGGER = get_logger(__name__)
-
+st.set_page_config(page_title="NASA NEOWS Data Viewer", page_icon="🌌", layout="wide")
 
 def run():
-    st.set_page_config(
-        page_title="Hello",
-        page_icon="👋",
-    )
+    # Title and Introduction
+    st.write("# Welcome to the NASA NEOWS Data Viewer 🌌")
+    st.write("### Your gateway to exploring near-Earth objects (NEOs) 🚀🪨")
 
-    st.write("# Welcome to Streamlit! 👋")
+    # Project Summary
+    st.markdown("""
+    This platform is designed to provide an easy way for users to view and explore raw data from the NASA Near Earth Object Web Service (NEOWS). Our goal is to make space data accessible and understandable, allowing everyone from enthusiasts to researchers to dive into the vast universe of asteroid information.
+    
+    **Features include:**
+    - **Date Range Selection:** Choose a specific range of dates to explore asteroids that were close to Earth during that period.
+    - **Asteroid Details:** View detailed information about each asteroid, including its size, velocity, distance from Earth, and more.
+    - **Interactive Exploration:** Utilize filters and selectors to narrow down your search and explore the data in an interactive manner.
+    """)
 
-    st.sidebar.success("Select a demo above.")
+    # About NEOWS
+    st.markdown("""
+    ### What is NEOWS?
+    The Near Earth Object Web Service (NEOWS) is a RESTful web service provided by NASA to offer information about near-Earth asteroids. It includes data on asteroid close approaches to Earth and allows users to search for specific asteroids or browse the dataset to discover new findings. NEOWS is maintained by NASA's Center for Near-Earth Object Studies (CNEOS).
+    
+    For more information, visit the [NASA API Portal](https://api.nasa.gov/).
+    """)
 
-    st.markdown(
-        """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
-    )
-
+    # Footer
+    st.markdown("""
+    ---
+    **Explore. Discover. Learn.** Join us on a journey through the cosmos as we uncover the mysteries of the universe, one asteroid at a time.
+    """)
 
 if __name__ == "__main__":
     run()
