@@ -3,6 +3,7 @@
 Welcome to the NASA NEOWS Data Viewer, your gateway to exploring near-Earth objects (NEOs) 🚀🪨. This platform is designed to make it easy for users to view and explore raw data from NASA's NEOWS, making space data accessible and understandable for everyone, from enthusiasts to researchers.
 
 ![Asteroid Image](images/asteroid.jpeg)
+
 *Image Credit: NASA/JPL/JHUAPL*
 
 ## Features
@@ -27,19 +28,19 @@ To run this Streamlit app locally, follow these steps:
 
 1. Clone the repository:
 
-git clone https://github.com/dezeraym/space-project.git
+`git clone https://github.com/dezeraym/space-project.git`
 
 2. Navigate to the project directory:
 
-cd space-project/app/
+`cd space-project/app/`
 
 3. Install the required Python packages:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 4. Run the Streamlit app:
 
-streamlit run Hello.py
+`streamlit run Hello.py`
 
 
 ## Explore, Discover, Learn
